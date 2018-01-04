@@ -43,7 +43,7 @@ public class HbaseUtils {
 	 */
 	public HbaseUtils() {
 		Configuration conf = HBaseConfiguration.create();
-		conf.set("hbase.zookeeper.quorum","node1,node2,node3");
+		conf.set("hbase.zookeeper.quorum","ubuntu");
 		try {
 			conn = ConnectionFactory.createConnection(conf);
 			admin = conn.getAdmin();
@@ -63,7 +63,7 @@ public class HbaseUtils {
 //		//查询一条记录
 //		hbase.getKey("stu","key1");
 //		//获取表的所有数据
-	hbase.getALLData("doc");
+//	hbase.getALLData("doc");
 //		//删除一条记录
 //		hbase.deleteOneRecord("stu","key1");
 //		//删除表
@@ -199,7 +199,7 @@ public class HbaseUtils {
 	@Before
 	public void setup() throws IOException {
 		Configuration config = HBaseConfiguration.create();
-		config.set("hbase.zookeeper.quorum","node1,node2,node3");
+		config.set("hbase.zookeeper.quorum","ubuntu");
 		conn = ConnectionFactory.createConnection(config);
 	}
 

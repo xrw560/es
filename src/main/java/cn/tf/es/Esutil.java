@@ -35,9 +35,8 @@ public class Esutil {
 			Settings settings = Settings.settingsBuilder().put("cluster.name", "tf").build();
 			try {
 				client = TransportClient.builder().settings(settings).build()
-						.addTransportAddress(new InetSocketTransportAddress(InetAddress.getByName("node1"), 9300))
-						.addTransportAddress(new InetSocketTransportAddress(InetAddress.getByName("node2"), 9300))
-						.addTransportAddress(new InetSocketTransportAddress(InetAddress.getByName("node3"), 9300));
+						.addTransportAddress(new InetSocketTransportAddress(InetAddress.getByName("192.168.138.129"),
+								9300));
 			} catch (UnknownHostException e) {
 				e.printStackTrace();
 			}

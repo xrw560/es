@@ -16,7 +16,7 @@ public class Index {
     @Test
     public void createIndex() throws Exception {
         List<Doc> arrayList = new ArrayList<Doc>();
-        File file = new File("C:\\Users\\asus\\Desktop\\doc1.txt");
+        File file = new File("/home/zkpk/code/es/doc1.txt");
         List<String> list = FileUtils.readLines(file,"UTF8");
         for(String line : list){
             Doc Doc = new Doc();
